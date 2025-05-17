@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{Software Requirements Specification (SRS)\\ Virtual Test Hub (VTH)}
+\author{}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\tableofcontents % This will generate the table of contents
+	
+	\newpage % Start a new page after the table of contents
+	
+	\section{Introduction}
+	
+	\subsection{Purpose}
+	The purpose of this document is to specify the software requirements for the development of the Virtual Test Hub (VTH). This system aims to provide a robust platform for conducting online exams efficiently, securely, and at scale, addressing the challenges of traditional paper-based exams and current online systems.
+	
+	\subsection{Scope}
+	The Virtual Test Hub will allow institutions to create, manage, and conduct exams online. Key features include user authentication, quiz management, multi-level quiz support, performance tracking, a repository of resources, and additional features like leaderboards and notifications. The system will primarily serve educational institutions seeking an alternative to physical exams.
+	
+	\subsection{Definitions, Acronyms, and Abbreviations}
+	\begin{itemize}
+		\item \textbf{VTH}: Virtual Test Hub
+		\item \textbf{UG}: Undergraduate
+		\item \textbf{PG}: Postgraduate
+		\item \textbf{MERN}: MongoDB, Express.js, React, Node.js
+	\end{itemize}
+	
+	\subsection{References}
+	Project description document: ``VTH.txt''
+	
+	\section{Overall Description}
+	
+	\subsection{Product Perspective}
+	The Virtual Test Hub is a web-based application that integrates various modules, including user authentication, quiz creation, performance tracking, and resource management, aimed at providing a seamless and secure environment for online exams.
+	
+	\subsection{Product Features}
+	\begin{itemize}
+		\item \textbf{User Authentication}: Login, sign-in, and registration.
+		\item \textbf{Quiz Management}: Timer-based quizzes, question randomization, multiple question types, and progress indicators.
+		\item \textbf{Multi-Level Quiz Support}: Separate quiz levels for Intermediate, Undergraduate, and Postgraduate.
+		\item \textbf{Repository}: Books and articles for preparation, with search, filter, favorites, and download options.
+		\item \textbf{User Profile}: Career details, activity logs, and performance reports.
+		\item \textbf{Instructor Dashboard}: Allows educators to manage exams and view student performance.
+		\item \textbf{Additional Features}: Leaderboards, notifications, reminders, and dark mode.
+	\end{itemize}
+	
+	\subsection{User Classes and Characteristics}
+	\begin{itemize}
+		\item \textbf{Students}: Users who will take the quizzes and view their performance reports.
+		\item \textbf{Instructors}: Users who will create, manage, and assess quizzes.
+		\item \textbf{Administrators}: Users who manage system-wide settings and user roles.
+	\end{itemize}
+	
+	\subsection{Operating Environment}
+	The system will be web-based, compatible with modern web browsers, and hosted on a cloud platform to ensure scalability and reliability.
+	
+	\subsection{Design and Implementation Constraints}
+	\begin{itemize}
+		\item Must ensure system stability under high server load during exam sessions.
+		\item Must implement security measures to prevent cheating and unauthorized access.
+	\end{itemize}
+	
+	\subsection{Assumptions and Dependencies}
+	\begin{itemize}
+		\item The system will rely on a stable internet connection for both students and instructors.
+		\item Users are expected to have basic computer literacy to interact with the system.
+	\end{itemize}
+	
+	\section{Specific Requirements}
+	
+	\subsection{Functional Requirements}
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{| m{2cm} | m{5cm} |}
+			\hline
+			\textbf{FR-ID} & \textbf{Description} \\
+			\hline
+			FR-1 & The system shall allow users to register, log in, and manage their profiles. Users should be able to update their personal information. \\
+			\hline
+			FR-2 & The system shall support quiz creation with multiple question types such as multiple choice, short answer, and essay. The system will also allow instructors to set time limits. \\
+			\hline
+			FR-3 & The system shall randomize quiz questions to prevent cheating. This feature ensures that no two users receive the same order of questions. \\
+			\hline
+			FR-4 & The system shall track time during quizzes and provide immediate feedback after submission. The feedback will include correct answers and explanations. \\
+			\hline
+			FR-5 & The system shall allow instructors to generate detailed performance reports, which include user activity, quiz scores, and progress over time. \\
+			\hline
+			FR-6 & The repository module shall allow students to search, filter, and download resources such as study materials, articles, and books. \\
+			\hline
+			FR-7 & The system shall provide leaderboard rankings based on quiz performance, and send notifications or reminders about upcoming exams or deadlines. \\
+			\hline
+		\end{tabular}
+		\caption{Functional Requirements for Virtual Test Hub (VTH)}
+	\end{table}
+	
+	\subsection{Non-Functional Requirements}
+	\begin{itemize}
+		\item \textbf{Performance}: The system must handle up to 1,000 concurrent users without crashing.
+		\item \textbf{Security}: Must implement encryption for user data and exam content.
+		\item \textbf{Usability}: The user interface should be intuitive and accessible to both students and instructors.
+		\item \textbf{Reliability}: The system should have 99.9\% uptime during examination periods.
+	\end{itemize}
+	
+	\subsection{User Interfaces}
+	\begin{itemize}
+		\item \textbf{Login Page}: Allows users to sign in or register.
+		\item \textbf{Quiz Interface}: Displays questions, a timer, and progress indicators.
+		\item \textbf{Instructor Dashboard}: Provides options to create quizzes, view reports, and manage users.
+	\end{itemize}
+	
+	\section{System Models}
+	
+	\subsection{Use Case Diagram}
+	\begin{itemize}
+		\item \textbf{Actors}: Students, Instructors, Administrators
+		\item \textbf{Use Cases}: Login, Quiz Creation, Quiz Attempt, View Results, Access Repository
+	\end{itemize}
+	
+	\subsection{Data Flow Diagrams}
+	\begin{itemize}
+		\item \textbf{DFD Level 0}: User login, quiz creation, and result tracking.
+		\item \textbf{DFD Level 1}: Detailed flow of data between user actions and system responses (e.g., fetching quiz questions, submitting results).
+	\end{itemize}
+	
+	\section{External Interface Requirements}
+	
+	\subsection{User Interfaces}
+	\begin{itemize}
+		\item \textbf{Responsive Design}: The system must work on both desktop and mobile devices.
+		\item \textbf{Theme Options}: Support for dark mode.
+	\end{itemize}
+	
+	\subsection{Hardware Interfaces}
+	The system will interact with standard web browsers on personal computers and mobile devices.
+	
+	\subsection{Software Interfaces}
+	The system will use PHP and MySQL for server-side operations, with MERN stack support for the user interface.
+	
+	\section{Other Non-Functional Requirements}
+	
+	\subsection{Performance Requirements}
+	Response times should be under 2 seconds for all user actions.
+	
+	\subsection{Security Requirements}
+	The system must implement user session management and prevent unauthorized access using multi-factor authentication.
+	
+	\subsection{Maintainability}
+	The system codebase will follow standard practices for maintainability and scalability.
+	
+\end{document}
