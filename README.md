@@ -81,27 +81,33 @@ However, existing online exam systems often suffer from:
 ## 📂 Project Setup
 
 ### 🧩 Prerequisites
-- Install **XAMPP** (or LAMPP on Linux)
-- Make sure **Apache** and **MySQL** services are running
-- Place your project folder inside the `htdocs` directory
+- Install **XAMPP/LAMPP** on your system  
+- Ensure **Apache** and **MySQL** services are running  
+- Project directory: `/opt/lampp/htdocs/VTH`
 
 ---
 
 ### ⚙️ Steps to Run the Project
-bash
-1️⃣ Open Terminal and start XAMPP Manager
+```bash
+# 1️⃣ Open Terminal and start the XAMPP manager
 cd /opt/lampp
 sudo ./manager-linux-x64.run
 
 # 2️⃣ Start Apache and MySQL from the XAMPP Control Panel
 
-# 3️⃣ Move your project folder to htdocs directory
-sudo cp -r /path/to/virtual-test-hub /opt/lampp/htdocs/
+# 3️⃣ Verify your project folder path
+#     It should be located at:
+/opt/lampp/htdocs/VTH
 
 # 4️⃣ Import the database
-#    - Open phpMyAdmin (http://localhost/phpmyadmin)
-#    - Create a new database (e.g., virtual_test_hub)
-#    - Import the provided .sql file (if available)
+#     - Open your browser and visit: http://localhost/phpmyadmin
+#     - Create a new database (example: virtual_test_hub)
+#     - Import the provided .sql file inside the VTH/database folder (if available)
+
+# 5️⃣ Run the project
+#     Open your browser and go to:
+http://localhost/VTH/
+
 
 # 5️⃣ Run the project
 #    Open your browser and visit:
