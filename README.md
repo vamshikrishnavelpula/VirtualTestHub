@@ -71,7 +71,7 @@ However, existing online exam systems often suffer from:
 ---
 
 ## 🚀 Future Enhancements
-- AI-based proctoring system for cheat prevention  
+- AI-based proctoring system for cheat prevention 
 - Real-time performance analytics  
 - Cloud deployment for scalability  
 - Mobile app version  
